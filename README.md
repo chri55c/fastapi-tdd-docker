@@ -78,6 +78,18 @@ Migrate database
 docker-compose exec web aerich migrate
 ```
 
+Upgrade database
+
+```bash
+docker-compose exec web aerich upgrade
+```
+
+Generate schema (skip migrations)
+
+```bash
+docker-compose exec web python app/db.py
+```
+
 Run tests
 
 ```bash
