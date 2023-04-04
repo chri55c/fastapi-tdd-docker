@@ -9,7 +9,9 @@ version = "0.1.0"
 [tool.poetry.dependencies]
 aerich = "0.7.1"
 asyncpg = "0.27.0"
+black = "^23.3.0"
 fastapi = "0.94.1"
+flake8 = "^6.0.0"
 gunicorn = "^20.1.0"
 httpx = "^0.23.3"
 pytest = "^7.2.2"
@@ -17,6 +19,7 @@ pytest-cov = "^4.0.0"
 python = "^3.11"
 tortoise-orm = "0.19.3"
 uvicorn = "0.21.1"
+isort = "^5.12.0"
 
 [tool.aerich]
 location = "./migrations"
@@ -27,6 +30,5 @@ tortoise_orm = "app.db.TORTOISE_ORM"
 build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core"]
 
-[tool.coverage.run]
-branch = true
-omit = ["tests/*"]
+[tool.black]
+line-length = 88
