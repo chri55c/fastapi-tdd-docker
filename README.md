@@ -159,6 +159,11 @@ list the 2 slowest tests
 docker-compose exec web python -m pytest --durations=2
 ```
 
+run tests in parallel (requires `pytest-xdist`)
+```bash
+docker-compose exec web pytest -n auto
+```
+
 ## Package management
 
 Login to GitHub Container Registry
